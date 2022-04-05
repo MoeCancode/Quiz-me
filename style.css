@@ -22,8 +22,12 @@ body {
     border-radius: 7px;
     font-size: larger;
     font-weight: bolder;
-    color: rgb(246, 116, 41);
+    color: rgb(250, 138, 74);
     cursor: pointer;
+}
+
+#homeScreen button:hover {
+    color: rgb(252, 95, 5);
 }
 
 .disclaimerBox {
@@ -47,8 +51,12 @@ body {
     font-size: large;
     font-weight: bolder;
     color: white;
-    background-color: rgb(246, 116, 41);
+    background-color: rgb(253, 129, 58);
     cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: rgb(246, 92, 2);
 }
 
 .goButton button {
@@ -79,7 +87,7 @@ body {
 }
 
 .questionBox {
-    display: none;
+    /* display: none; */
     margin: auto;
     padding-top: 10px;
     padding-bottom: 50px;
@@ -117,4 +125,13 @@ body {
     background-color: rgb(253, 187, 143);
     color: black;
     cursor: pointer;
+}
+
+.option:hover {
+    background-color: rgb(251, 154, 88);
+}
+
+.option span {
+    font-weight: bold;
+    font-size: large;
 }
