@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(191, 86, 26);
+    color: white;
+}
+
+#homeScreen {
+    margin-bottom: 40px;
+}
+
+#homeScreen h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+#homeScreen button {
+    position: relative;
+    left: 42%;
+    padding: 1em 4em;
+    border: white 1px solid;
+    border-radius: 7px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(246, 116, 41);
+    cursor: pointer;
+}
+
+.disclaimerBox {
+    display: none;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    
+
+}
+
+.buttons {
+    padding: 0.5em 2em;
+    border: white 1px solid;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(246, 116, 41);
+    cursor: pointer;
+}
+
+.goButton button {
+    width: 50%;
+    font-weight: 520;
+}
+
+.disclaimerBody p {
+    font-weight: 520;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: large;
+    line-height: 145%;
+}
+
+.disclaimerTitle {
+    border-bottom: 4px solid rgb(247, 156, 51);
+}
+
+.disclaimerTitle h2 {
+    font-weight: 600;
+}
+
+.disclaimerBody span {
+    font-weight: 600;
+    color: rgb(246, 116, 41);
+}
