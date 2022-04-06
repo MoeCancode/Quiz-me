@@ -62,6 +62,7 @@ goButton.addEventListener("click", function(){
  submitButton.addEventListener("click", function() {
     var initials = document.querySelector("myName");
     localStorage.setItem("score", initials.value);
+    console.log("I was executed");
  })
 
   
