@@ -3,6 +3,7 @@ var goButton = document.querySelector(".goButton button");
 var disclaimerBox = document.querySelector(".disclaimerBox");
 var questionBox = document.querySelector(".questionBox");
 var homeScreen = document.querySelector("#homeScreen");
+var resultBox = document.querySelector(".result");
 
 // When start Button is clicked 
 startButton.addEventListener("click", function(){
@@ -16,21 +17,52 @@ goButton.addEventListener("click", function(){
     console.log("I was clicked");
     disclaimerBox.classList.remove("triggerDisclaimer");
     questionBox.classList.add("triggerQuestionBox");
-    displayQuestions();
+    displayQuestions(0);
  })
 
 
  var startingQuestionCount = 0;
+ var nextButton = document.querySelector(".footer button")
+
+ //Click Next question to update value of num
+ nextButton.addEventListener("click", function(){
+     startingQuestionCount ++;
+     
+     if(startingQuestionCount < 2)
+     displayQuestions(startingQuestionCount);
+     
+     else if (startingQuestionCount == 2) {
+         nextButton.innerHTML = "End Quiz";
+     }
+     
+     else {
+         questionBox.classList.remove("triggerQuestionBox");
+
+     }
+ })
+
   
  //function that displays questions
     function displayQuestions(num) {
+        
+        //Update question number
         var questionNumber = document.querySelector(".questionNumber");
         questionNumber.innerHTML = '<h2>' + content[num].questionNumber + '</h2>';
         
+        //Update Question statement
         var questionText = document.querySelector(".questionStatement");
         questionText.innerHTML = '<span>' + content[num].question + '</span>';
 
-        var optionOne = document.querySelector("")
+        //Update options
+        var optionOne = document.querySelector("#one");
+        var optionTwo = document.querySelector("#two");
+        var optionThree = document.querySelector("#three");
+        var optionFour = document.querySelector("#four");
+
+        optionOne.innerHTML = '<span>' + content[num].options[0];
+        optionTwo.innerHTML = '<span>' + content[num].options[1];
+        optionThree.innerHTML = '<span>' + content[num].options[2];
+        optionFour.innerHTML = '<span>' + content[num].options[3];
   }
 
 

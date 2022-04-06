@@ -179,15 +179,25 @@ body {
 }
 
 .result {
-    display: none;
+    position: absolute;
+    left: 350px;
+    bottom: 95px;
+    opacity: 0;
+    pointer-events: none;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-bottom: 50px;
     width: 50%;
     text-align: center;
     background-color: white;
     color: black;
     border-radius: 20px;
+}
+
+.result.triggerResultBox {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #myScore {
