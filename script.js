@@ -76,6 +76,7 @@ goButton.addEventListener("click", function(){
      resultBox.style.pointerEvents = "none";
      gallery.style.opacity = "1";
      gallery.style.pointerEvents = "auto";
+     listScores();
 
  })
 
