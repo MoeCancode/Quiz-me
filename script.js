@@ -8,6 +8,9 @@ var countdownTimer = document.querySelector(".timeLeft p span");
 var scoreDisplay = document.querySelector("#myScore span");
 var nextButton = document.querySelector(".footer button")
 var submitButton = document.querySelector("#highscoreForm button");
+var viewScoresButton = document.querySelector("#scoresView");
+var gallery = document.querySelector(".galleryBox");
+var newGameButton = document.querySelector("#restart");
 
 var timeScore = 60;
 
@@ -16,6 +19,9 @@ var optionOne = document.querySelector("#one");
 var optionTwo = document.querySelector("#two");
 var optionThree = document.querySelector("#three");
 var optionFour = document.querySelector("#four");
+
+var startingQuestionCount = 0;
+ var counter;
 
 // When start Button is clicked 
 startButton.addEventListener("click", function(){
@@ -27,12 +33,11 @@ startButton.addEventListener("click", function(){
 goButton.addEventListener("click", function(){
     disclaimerBox.classList.remove("triggerDisclaimer");
     questionBox.classList.add("triggerQuestionBox");
+    startingQuestionCount= 0;
     displayQuestions(0);
     startCountdown(60);
  })
 
- var startingQuestionCount = 0;
- var counter;
  
 
  //Click Next question to update value of num
@@ -64,6 +69,21 @@ goButton.addEventListener("click", function(){
     var initials = document.getElementById("myName");
     localStorage.setItem(initials.value, timeScore);
  })
+
+ //View highscores button functionality
+ viewScoresButton.addEventListener("click", function() {
+     resultBox.style.opacity = "0";
+     resultBox.style.pointerEvents = "none";
+     gallery.style.opacity = "1";
+     gallery.style.pointerEvents = "auto";
+
+ })
+
+ //New game button functionality
+ newGameButton.addEventListener("click", function() {
+    window.location.reload();
+
+ }) 
 
   
  //function that displays questions
@@ -106,7 +126,6 @@ goButton.addEventListener("click", function(){
         optionThree.innerHTML = '<span>' + content[num].options[2];
         optionFour.innerHTML = '<span>' + content[num].options[3];
 
-        var optionContainer = document.querySelector(".optionsBox");
         var optionList = document.querySelectorAll(".option");
         
         for(var i =0; i<4; i++)
