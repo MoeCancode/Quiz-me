@@ -7,14 +7,12 @@ var resultBox = document.querySelector(".result");
 
 // When start Button is clicked 
 startButton.addEventListener("click", function(){
-    console.log
     disclaimerBox.classList.add("triggerDisclaimer");
     homeScreen.classList.add("hideHS");
 })
 
 //When go button is clicked
 goButton.addEventListener("click", function(){
-    console.log("I was clicked");
     disclaimerBox.classList.remove("triggerDisclaimer");
     questionBox.classList.add("triggerQuestionBox");
     displayQuestions(0);
@@ -65,6 +63,26 @@ goButton.addEventListener("click", function(){
         optionTwo.innerHTML = '<span>' + content[num].options[1];
         optionThree.innerHTML = '<span>' + content[num].options[2];
         optionFour.innerHTML = '<span>' + content[num].options[3];
+
+        var optionContainer = document.querySelector(".optionsBox");
+        var optionList = document.querySelectorAll(".option");
+        
+        for(var i =0; i<4; i++)
+        {
+            optionList[i].setAttribute("onclick", "select(this)")
+        }
+  }
+
+
+  function select(myAnswer) {
+      var answerString = myAnswer.textContent;
+      var correctAnswer = content[startingQuestionCount].answer
+      
+      if(correctAnswer == answerString) {
+          console.log("You are a genius");
+          myAnswer.style.backgroundColor = "rgb(79, 184, 77)";
+          myAnswer.style.color = "white";
+      }
   }
 
 
