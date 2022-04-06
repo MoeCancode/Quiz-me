@@ -44,6 +44,22 @@ goButton.addEventListener("click", function(){
   
  //function that displays questions
     function displayQuestions(num) {
+
+        var optionOne = document.querySelector("#one");
+        var optionTwo = document.querySelector("#two");
+        var optionThree = document.querySelector("#three");
+        var optionFour = document.querySelector("#four");
+        
+        //Reset select styling for all options
+        optionOne.style.backgroundColor = "rgb(253, 187, 143)";
+        optionOne.style.color = "black";
+        optionTwo.style.backgroundColor = "rgb(253, 187, 143)";
+        optionTwo.style.color = "black";
+        optionThree.style.backgroundColor = "rgb(253, 187, 143)";
+        optionThree.style.color = "black";
+        optionFour.style.backgroundColor = "rgb(253, 187, 143)";
+        optionFour.style.color = "black";
+
         
         //Update question number
         var questionNumber = document.querySelector(".questionNumber");
@@ -54,10 +70,7 @@ goButton.addEventListener("click", function(){
         questionText.innerHTML = '<span>' + content[num].question + '</span>';
 
         //Update options
-        var optionOne = document.querySelector("#one");
-        var optionTwo = document.querySelector("#two");
-        var optionThree = document.querySelector("#three");
-        var optionFour = document.querySelector("#four");
+        
 
         optionOne.innerHTML = '<span>' + content[num].options[0];
         optionTwo.innerHTML = '<span>' + content[num].options[1];
@@ -71,6 +84,7 @@ goButton.addEventListener("click", function(){
         {
             optionList[i].setAttribute("onclick", "select(this)")
         }
+
   }
 
 
@@ -81,6 +95,11 @@ goButton.addEventListener("click", function(){
       if(correctAnswer == answerString) {
           console.log("You are a genius");
           myAnswer.style.backgroundColor = "rgb(79, 184, 77)";
+          myAnswer.style.color = "white";
+      }
+
+      else {
+          myAnswer.style.backgroundColor = "red";
           myAnswer.style.color = "white";
       }
   }
