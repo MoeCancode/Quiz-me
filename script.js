@@ -7,8 +7,10 @@ var resultBox = document.querySelector(".result");
 var countdownTimer = document.querySelector(".timeLeft p span");
 var scoreDisplay = document.querySelector("#myScore span");
 var nextButton = document.querySelector(".footer button")
+var submitButton = document.querySelector("#save");
 
 var timeScore = 60;
+
 
 var optionOne = document.querySelector("#one");
 var optionTwo = document.querySelector("#two");
@@ -53,6 +55,13 @@ goButton.addEventListener("click", function(){
          
 
      }
+ })
+ 
+ 
+ //Saving score to local storage ------------------------------------------------------------------
+ submitButton.addEventListener("click", function() {
+    var initials = document.querySelector("myName");
+    localStorage.setItem("score", initials.value);
  })
 
   
@@ -144,6 +153,10 @@ goButton.addEventListener("click", function(){
         time--;
     }, 1000)
   }
+
+//   submitButton.addEventListener("click", function() {
+//     localStorage.setItem(timeScore, initials.value);
+// })
 
 
 //-------------------------------------------------------------------------
