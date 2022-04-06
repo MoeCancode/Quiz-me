@@ -8,6 +8,11 @@ body {
     margin-bottom: 40px;
 }
 
+#homeScreen.hideHS {
+    opacity: 0;
+    pointer-events: none;
+}
+
 #homeScreen h2 {
     text-align: center;
     font-weight: 500;
@@ -43,10 +48,10 @@ body {
     pointer-events: none;
 }
 
-.disclaimerBox.triggered {
-    z-index: 5;
+.disclaimerBox.triggerDisclaimer {
+    z-index: 6;
     opacity: 1;
-    pointer-events: active;
+    pointer-events: auto;
 }
 
 .buttons {
@@ -92,7 +97,10 @@ body {
 }
 
 .questionBox {
-    display: none;
+    position: absolute;
+    left: 350px;
+    bottom: 95px;
+    opacity: 0;
     pointer-events: none;
     margin: auto;
     padding-top: 6px;
@@ -102,6 +110,12 @@ body {
     background-color: white;
     color: black;
     border-radius: 20px;
+}
+
+.questionBox.triggerQuestionBox {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .questionStatement {
