@@ -7,7 +7,7 @@ var resultBox = document.querySelector(".result");
 var countdownTimer = document.querySelector(".timeLeft p span");
 var scoreDisplay = document.querySelector("#myScore span");
 var nextButton = document.querySelector(".footer button")
-var submitButton = document.querySelector("#save");
+var submitButton = document.querySelector("#highscoreForm button");
 
 var timeScore = 60;
 
@@ -58,11 +58,11 @@ goButton.addEventListener("click", function(){
  })
  
  
- //Saving score to local storage ------------------------------------------------------------------
- submitButton.addEventListener("click", function() {
-    var initials = document.querySelector("myName");
-    localStorage.setItem("score", initials.value);
-    console.log("I was executed");
+ //Saving score to local storage --
+ submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    var initials = document.getElementById("myName");
+    localStorage.setItem(initials.value, timeScore);
  })
 
   
