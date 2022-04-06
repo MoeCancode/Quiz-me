@@ -6,6 +6,7 @@ var homeScreen = document.querySelector("#homeScreen");
 var resultBox = document.querySelector(".result");
 var countdownTimer = document.querySelector(".timeLeft p span");
 var scoreDisplay = document.querySelector("#myScore span");
+var nextButton = document.querySelector(".footer button")
 
 var timeScore = 60;
 
@@ -30,7 +31,7 @@ goButton.addEventListener("click", function(){
 
  var startingQuestionCount = 0;
  var counter;
- var nextButton = document.querySelector(".footer button")
+ 
 
  //Click Next question to update value of num
  nextButton.addEventListener("click", function(){
@@ -58,6 +59,9 @@ goButton.addEventListener("click", function(){
  //function that displays questions
     function displayQuestions(num) {
         
+        //Cant press Next question unless you select an option
+        nextButton.style.pointerEvents = "none";
+
         //Reset select styling for all options
         optionOne.style.backgroundColor = "rgb(253, 187, 143)";
         optionOne.style.color = "black";
@@ -108,12 +112,13 @@ goButton.addEventListener("click", function(){
       var correctAnswer = content[startingQuestionCount].answer
       
       if(correctAnswer == answerString) {
-          console.log("You are a genius");
+          nextButton.style.pointerEvents = "auto";
           myAnswer.style.backgroundColor = "rgb(79, 184, 77)";
           myAnswer.style.color = "white";
       }
 
       else {
+          nextButton.style.pointerEvents = "auto";
           myAnswer.style.backgroundColor = "red";
           myAnswer.style.color = "white";
           timeScore = timeScore - 10;

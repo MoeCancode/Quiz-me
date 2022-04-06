@@ -178,6 +178,10 @@ body {
     border-radius: 7px;
 }
 
+.footer button {
+    pointer-events: none;
+}
+
 .result {
     position: absolute;
     left: 350px;
