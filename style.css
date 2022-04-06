@@ -185,7 +185,7 @@ body {
 .result {
     position: absolute;
     left: 350px;
-    bottom: 395px;
+    bottom: 355px;
     opacity: 0;
     pointer-events: none;
     margin: auto;
@@ -219,4 +219,32 @@ body {
 
 #highscoreForm {
     margin-top: 30px;
+}
+
+#scoresView, #save {
+    margin: 20px;
+}
+
+#scoresView {
+    background-color: rgb(14, 179, 14);
+}
+
+#scoresView:hover {
+    background-color: rgb(38, 211, 8);
+}
+
+.galleryBox {
+    position: absolute;
+    left: 350px;
+    bottom: 355px;
+    opacity: 1;
+    pointer-events: none;
+    margin: auto;
+    padding-top: 6px;
+    padding-bottom: 50px;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
 }
