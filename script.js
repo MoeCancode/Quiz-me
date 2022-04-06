@@ -32,11 +32,13 @@ goButton.addEventListener("click", function(){
      displayQuestions(startingQuestionCount);
      
      else if (startingQuestionCount == 2) {
+        displayQuestions(startingQuestionCount);
          nextButton.innerHTML = "End Quiz";
      }
      
      else {
          questionBox.classList.remove("triggerQuestionBox");
+         resultBox.classList.add("triggerResultBox");
 
      }
  })
@@ -75,6 +77,7 @@ goButton.addEventListener("click", function(){
      {
          questionNumber: 'Question 1',
          question: "What does '===' mean in javascript?",
+         answer: "Equal in value & type",
          options: [
              "Not equal",
              "Equal in value only",
@@ -86,6 +89,7 @@ goButton.addEventListener("click", function(){
      {
         questionNumber: 'Question 2',
         question: "What does the 'var' keyword represent in JS?",
+        answer: "Variable",
         options: [
             "Varsity",
             "Variable",
@@ -97,6 +101,7 @@ goButton.addEventListener("click", function(){
     {
         questionNumber: 'Question 3',
         question: "What can you NOT do using Javascript?",
+        answer: "Charge your laptop",
         options: [
             "Traverse the DOM",
             "Add event listeners",
