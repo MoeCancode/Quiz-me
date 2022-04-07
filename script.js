@@ -1,3 +1,4 @@
+//Query selectors for elements used
 var startButton = document.querySelector("#homeScreen button");
 var goButton = document.querySelector(".goButton button");
 var disclaimerBox = document.querySelector(".disclaimerBox");
@@ -11,6 +12,8 @@ var submitButton = document.querySelector("#highscoreForm button");
 var viewScoresButton = document.querySelector("#scoresView");
 var gallery = document.querySelector(".galleryBox");
 var newGameButton = document.querySelector("#restart");
+var scoreList = document.querySelector("#listOfScores span");
+
 
 var timeScore = 60;
 
@@ -86,6 +89,14 @@ goButton.addEventListener("click", function(){
 
  }) 
 
+//Function that displays scores in local storage
+ function listScores() {
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        scoreList.innerHTML = scoreList.innerHTML + (`${key}: ${localStorage.getItem(key)}`) + "<br>";
+    }  
+ }   
+
   
  //function that displays questions
     function displayQuestions(num) {
@@ -136,7 +147,7 @@ goButton.addEventListener("click", function(){
 
   }
 
-
+//What needs to happen when you select an option
   function select(myAnswer) {
       var answerString = myAnswer.textContent;
       var correctAnswer = content[startingQuestionCount].answer
@@ -174,10 +185,6 @@ goButton.addEventListener("click", function(){
         time--;
     }, 1000)
   }
-
-//   submitButton.addEventListener("click", function() {
-//     localStorage.setItem(timeScore, initials.value);
-// })
 
 
 //-------------------------------------------------------------------------
