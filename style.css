@@ -259,3 +259,8 @@ body {
     border: orange 1px solid;
     border-radius: 15px;
 }
+
+#listOfScores span {
+    line-height: 5px;
+    font-weight: bold;
+}
