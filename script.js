@@ -105,20 +105,20 @@ goButton.addEventListener("click", function(){
         nextButton.style.pointerEvents = "none";
 
         //Reset select styling for all options
-        optionOne.style.backgroundColor = "rgb(253, 187, 143)";
-        optionOne.style.color = "black";
+        optionOne.style.backgroundColor = "rgb(26, 47, 81)";
+        optionOne.style.color = "white";
         optionOne.style.pointerEvents = "auto";
 
-        optionTwo.style.backgroundColor = "rgb(253, 187, 143)";
-        optionTwo.style.color = "black";
+        optionTwo.style.backgroundColor = "rgb(26, 47, 81)";
+        optionTwo.style.color = "white";
         optionTwo.style.pointerEvents = "auto";
 
-        optionThree.style.backgroundColor = "rgb(253, 187, 143)";
-        optionThree.style.color = "black";
+        optionThree.style.backgroundColor = "rgb(26, 47, 81)";
+        optionThree.style.color = "white";
         optionThree.style.pointerEvents = "auto";
 
-        optionFour.style.backgroundColor = "rgb(253, 187, 143)";
-        optionFour.style.color = "black";
+        optionFour.style.backgroundColor = "rgb(26, 47, 81)";
+        optionFour.style.color = "white";
         optionFour.style.pointerEvents = "auto";
 
         
